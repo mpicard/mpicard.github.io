@@ -94,4 +94,4 @@ If you were to transplant this into an existing apollo-server-express app all yo
 
 ![Tracing output in GraphiQL]({{ "/assets/img/tracing.png" | absolute_url }})
 
-That's interesting! Now we see all this extra stuff under `extensions`, this is the performance trace for this query, tailored for GraphQL. Later we'll filter this out since the client doesn't need it but for now we'll keep it. Stay tuned for part two when we dive into the proxy server which will collect and filter this output into postgres using `jsonb`!
+That's interesting! Now we see all this extra stuff under `extensions`, this is the performance trace for this query, tailored for GraphQL. Later we'll filter this out since the client doesn't need it but for now we'll keep it. Now that you've done all that you've done all that finger exercising, [here's the GitHub repo](https://github.com/mpicard/graphql-metrics-proxy/tree/part-1) for the proxy in case you want to copy my tsconfig, etc files. Stay tuned for part two when we dive into the proxy server which will collect and filter this output into postgres using `jsonb`!
