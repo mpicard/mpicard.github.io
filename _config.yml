@@ -1,24 +1,24 @@
 port: 4444
-markdown:         redcarpet
-highlighter:      pygments
+markdown: redcarpet
+highlighter: pygments
 plugins:
   - jekyll-paginate
 
-permalink:        pretty
+permalink: pretty
 
-title:            'All Loops Considered'
+title: All Loops Considered
 tagline:
-description:      'Programming, et al.'
-url:              http://all-loops-considered.org/
-baseurl:          /
+description: Programming, et al.
+url: http://all-loops-considered.org
+baseurl: /
 
 author:
-  name:           'Martin Picard'
-  url:            https://github.com/mpicard
+  name: 'Martin Picard'
+  url: https://github.com/mpicard
 
-paginate:         5
+paginate: 5
 
 version: 2.0.0
 
 github:
-  repo:           https://github.com/mpicard/mpicard.github.io
+  repo: https://github.com/mpicard/mpicard.github.io
