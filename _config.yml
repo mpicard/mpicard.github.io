@@ -1,6 +1,6 @@
 port: 4444
 markdown: redcarpet
-highlighter: pygments
+highlighter: rouge
 
 permalink: pretty
 
