@@ -1,13 +1,6 @@
 ---
 layout: post
 title: Make your own GraphQL metrics dashboard - Part 1
-category: Tutorial
-tags:
-  - GraphQL
-  - metrics
-  - API
-  - TypeScript
-  - ES6
 ---
 
 Hello and welcome to my multi-part tutorial series on how to build your own GraphQL metrics dashboard for fun! In this series will leverage the Apollo Tracing interface to collected and parse metric data from your GraphQL API. This series is inspired by the incredibly cool Apollo Engine, which uses the tracing extension we'll use to get that awesome performance data. GraphQL has a unique execution pattern that allows us to do some really cool stuff that isn't possible with plain REST out of the box, like query usage on a per field basis. Due to GraphQL's ability to resolve data from multiple sources asynchronously and piece  it together, we can see which areas of our queries are slowing down the overall response and build timelines for each query.

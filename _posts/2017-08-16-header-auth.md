@@ -1,11 +1,6 @@
 ---
 layout: post
 title: Header based pre-authentication with Django REST Framework
-category: Tutorial
-tags:
- - Python
- - Django Rest Framework
- - API
 ---
 
 As the title suggests, this is a short How-To on using header based pre-authentication with Django REST Framework (DRF). I'm currently working in a system that does authentication through a gateway and forwards requests to corresponding private APIs with a custom HTTP authentication header. This scenario is quite simple to add to DRF's pluggable authentication. You can find the entire project [source code here](https://github.com/mpicard/blog-header-auth-example).
