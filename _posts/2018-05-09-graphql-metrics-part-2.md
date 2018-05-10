@@ -78,7 +78,7 @@ app.listen(4000, () => {
 });
 
 /**
- * Collect query metadata into postgres.
+ * Collect query metadata and post to metrics api.
  *
  * @param query GraphQL query string.
  * @param operationName (optional)
