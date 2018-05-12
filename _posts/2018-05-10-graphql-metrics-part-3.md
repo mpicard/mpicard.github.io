@@ -45,7 +45,7 @@ services:
       POSTGRES_PASSWORD: postgres
 ```
 
-We'll use `dotenv` to manage environment variables for postgres:
+To start postgres use `docker-compose up -d`. Then we'll use `dotenv` to manage environment variables for postgres:
 
 ```bash
 # .env

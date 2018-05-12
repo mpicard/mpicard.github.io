@@ -1,5 +1,4 @@
 port: 4444
-markdown: kramdown
 highlighter: rouge
 
 permalink: pretty

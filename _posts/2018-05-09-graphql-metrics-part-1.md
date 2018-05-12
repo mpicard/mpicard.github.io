@@ -92,6 +92,6 @@ type User {
 
 If you were to transplant this into an existing apollo-server-express app all you need to do is spawn the proxy server and enable tracing to get started. Awesome so far, let's run `yarn start` and check out the tracing data.
 
-![Tracing output in GraphiQL]({{ "/assets/img/tracing.png" | absolute_url }})
+![Tracing output in GraphiQL]({{ "/assets/img/tracing.png" | absolute_url }}) 
 
 That's interesting! Now we see all this extra stuff under `extensions`, this is the performance trace for this query, tailored for GraphQL. Later we'll filter this out since the client doesn't need it but for now we'll keep it. Now that you've done all that you've done all that finger exercising, [here's the GitHub repo](https://github.com/mpicard/graphql-metrics-proxy/tree/part-1) for the proxy in case you want to copy my tsconfig, etc files. Please leave comments or questions in the [Issues](https://github.com/mpicard/graphql-metrics-proxy/issues)! Stay tuned for [part two](({% post_url 2018-05-09-graphql-metrics-part-2 %})) when we dive into the proxy server which will collect and filter this output into postgres using `jsonb`!
