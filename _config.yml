@@ -21,6 +21,6 @@ version: 2.0.0
 github:
   repo: https://github.com/mpicard/mpicard.github.io
 
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-gist
