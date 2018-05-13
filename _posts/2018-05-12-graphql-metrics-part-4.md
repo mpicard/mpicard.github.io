@@ -3,6 +3,8 @@ layout: post
 title: Make your own GraphQL metrics dashboard - Part 4
 ---
 
+![Operations table UI]({{ "/assets/img/dash-1.png" | absolute_url }})
+
 Hello and welome back to 'Make your own Graphql metrics dashboard'. If you missed [part 1]({% post_url 2018-05-09-graphql-metrics-part-1 %}), [part 2]({% post_url 2018-05-09-graphql-metrics-part-2 %}) or [part 3]({% post_url 2018-05-10-graphql-metrics-part-3 %}) head there now first.
 
 In case you've never used `docker-compose` before and received an error last time like "unable to connect to port :5432" error you can start your `postgres` instance with the command `docker-compose up -d` which will run in the background on port 5432.
@@ -366,6 +368,6 @@ export function prettyDuration(ns, digits = 1) {
 }
 ```
 
-![Operations table UI]({{ "/assets/img/dash-1.png" | absolute_url }})
+![Operations table UI]({{ "/assets/img/dash-2.png" | absolute_url }})
 
 Tada! Thanks everyone for following along so far. If you have any questions or comments please go to the [Issues]() and leave something there. I'll also provide the full repo so you can use my stylesheets if you want or make your own. Next time we'll add a few more metric calculations and views centered around more fine grained details in each GraphQL resolver to pin point slow backends.
