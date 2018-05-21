@@ -95,4 +95,4 @@ function collectMetrics(query, operationName, extensions, errors) {
 }
 ```
 
-Now if we start the server using `yarn start` and navigate to the [proxy's graphiQL](http://localhost:4000/graphiql) instead of the mock server, we should be able to make a query and not get any of the `extensions` object in the response! Meanwhile, in the console you should see the query, operation name, extensions object and, if any, errors. Very cool! Join us next time in part 3 when we take all that data and put it into a postgres database using `jsonb` and makes some queries!
+Now if we start the server using `yarn start` and navigate to the [proxy's graphiQL](http://localhost:4000/graphiql) instead of the mock server, we should be able to make a query and not get any of the `extensions` object in the response! Meanwhile, in the console you should see the query, operation name, extensions object and, if any, errors. Very cool! Join us next time in [part 3]({% post_url 2018-05-10-graphql-metrics-part-3 %}) when we take all that data and put it into a postgres database using `jsonb` and makes some queries!

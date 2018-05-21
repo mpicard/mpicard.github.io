@@ -206,7 +206,7 @@ Very cool, so we've got a (very :P) basic monitoring tool in place let's do what
 
 If you don't know React then I'd suggest following along anyways and you can map my react components into whatever you fancy, using the same queries. So let's dive right in let's `create-react-app ui`. Then we have to add the `Apollo` (link) client stuff: `yarn add apollo-boost graphql graphql-tag react-apollo` and now start the webpack server: `yarn start` and let's get cracking:
 
-```javascript
+```jsx
 // index.js
 import './styles';
 
@@ -234,7 +234,7 @@ registerServiceWorker();
 
 I think this ApolloProvider is called a higher order component?
 
-```javascript
+```jsx
 // App.js
 import './App.css';
 
@@ -258,7 +258,7 @@ export default App;
 
 The `Sidebar` is optional for now since we're not going to do any routing right now. By the way, I will include all the css files in the repo link if you want to use mine.
 
-```javascript
+```jsx
 // Sidebar.js
 import './Sidebar.css';
 
@@ -279,7 +279,7 @@ const Sidebar = () => (
 export default Sidebar;
 ```
 
-```javascript
+```jsx
 // Opereations.js
 import './Operations.css';
 
@@ -334,7 +334,7 @@ export default Operations
 
 We'll create a few helper functions to format our numbers a little better so `prettyNumber` would take 12653 and return 12.6K. `prettuDuration` is very similar but takes nanoseconds and rounds them up to microseconds, milliseconds, etc.
 
-```javascript
+```jsx
 // utils.js
 
 // 12495 => 12.4K
@@ -370,4 +370,4 @@ export function prettyDuration(ns, digits = 1) {
 
 ![Operations table UI]({{ "/assets/img/dash-2.png" | absolute_url }})
 
-Tada! Thanks everyone for following along so far. If you have any questions or comments please go to the [Issues]() and leave something there. I'll also provide the full repo so you can use my stylesheets if you want or make your own. Next time we'll add a few more metric calculations and views centered around more fine grained details in each GraphQL resolver to pin point slow backends.
+Tada! Thanks everyone for following along so far. If you have any questions or comments please go to the [Issues]() and leave something there. I'll also provide the full repo so you can use my stylesheets if you want or make your own. Next time in [part 5]({% post_url 2018-05-21-graphql-metrics-part-5 %}) we'll add a few more metric calculations and views centered around more fine grained details in each GraphQL resolver to pin point slow backends.
