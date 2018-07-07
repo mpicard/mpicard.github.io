@@ -5,7 +5,7 @@ title: Lazy Loading Angular modules from a remote server
 
 Today I'm going to share a technique for lazy loading Angular modules from another server. This is very useful for projects which have grown too big to be monorepo or if monorepos aren't used in your company. It allows lazy loaded modules to be developed and deployed independently.
 
-# Step 1 - Build a remote module
+## Step 1 - Build a remote module
 
 Create (or migrate an existing module to) a new Angular CLI repo (`ng new $NAME --routing`). Then install `ng-packagr` and `http-server` (`yarn add -D ng-packagr http-server`). Now create an entry point for the module called EntryModule and add routing (`ng g m entry --routing`). Add an EntryComponent and something to distinguish this module and component like `<p>Module $NAME - entry works!</p>`. Change the `build` script to `ng-packagr -p package.json` and add the followig to `package.json`:
 
@@ -49,7 +49,7 @@ export class AppRoutingModule {}
 
 Now make sure you're importing `RoutingModule.forRoot([])` and `AppRoutingModule` in `AppModule`. Ensure that `EntryModule` is not imported in `AppModule` or `AppRoutingModule`. This setup will emulate the actual app that will serve this module. We'll call `yarn build` to start `ng-packagr` and while that runs we'll move onto step 2
 
-# Step 2 - Build the core app
+## Step 2 - Build the core app
 
 The `core` app will be deployed and use SystemJs to load the remote module. So create a new app (`ng new core --routing`) called `core` (or whatever you want really). Install `systemsj` (`yarn add systemjs`) and `http-server` with `cpy-cli` (`yarn add -D cpy-cli http-server`). In your `angular.json`/`.angular-cli.json` add `"node_modules/systemjs/dist/system.js",` to "scripts".
 
@@ -99,7 +99,7 @@ const routes: Routes = [
 ]
 ```
 
-# Step 3 - Serving the bundle and app
+## Step 3 - Serving the bundle and app
 
 By now the `ng-packagr` build should be done and you'll have a dist folder with a bunch of stuff. The only file(s) we care about are in the `bundles` folder. These are SystemJs compatible UMD bundles. You can use `cpy-cli` to move them or just serve them from there using `http-server dist/bundles -p 8888`.
 
