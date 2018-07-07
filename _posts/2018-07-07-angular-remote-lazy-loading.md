@@ -105,4 +105,6 @@ By now the `ng-packagr` build should be done and you'll have a dist folder with 
 
 Now start the `core` dev server using `yarn start` and go to http://localhost:4200. When we inspect the network tab we'll see an initial main.js load, then a BUNDLE.umd.min.js request and your entry component should appear on the page! Neat!
 
+If you're looking for a complete example repo with lazy loaded modules and a lazy loaded non-routing module (eg. a navbar) [click here!](http://all-loops-considered.org/2018/07/07/angular-remote-lazy-loading/platform).
+
 Thanks for reading!
