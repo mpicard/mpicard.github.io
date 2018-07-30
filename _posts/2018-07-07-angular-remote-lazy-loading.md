@@ -92,7 +92,7 @@ const routes: Routes = [
     children: [
       {
         path: 'lazy',
-        loadChildren: () => loadRemoteChildren('$NAME') // your module name from earlier
+        loadChildren: () => loadRemoteChildren('NAME') // your module name from earlier
       }
     ]
   }
@@ -103,8 +103,8 @@ const routes: Routes = [
 
 By now the `ng-packagr` build should be done and you'll have a dist folder with a bunch of stuff. The only file(s) we care about are in the `bundles` folder. These are SystemJs compatible UMD bundles. You can use `cpy-cli` to move them or just serve them from there using `http-server dist/bundles -p 8888`.
 
-Now start the `core` dev server using `yarn start` and go to http://localhost:4200. When we inspect the network tab we'll see an initial main.js load, then a BUNDLE.umd.min.js request and your entry component should appear on the page! Neat!
+Now start the `core` dev server using `yarn start` and go to http://localhost:4200. When we inspect the network tab we'll see an initial main.js load, then a `BUNDLE.umd.min.js` request and your entry component should appear on the page! Neat!
 
-If you're looking for a complete example repo with lazy loaded modules and a lazy loaded non-routing module (eg. a navbar) [click here!](http://all-loops-considered.org/2018/07/07/angular-remote-lazy-loading/platform).
+If you're looking for a complete example repo with lazy loaded modules and a lazy loaded non-routing module (eg. a navbar) [click here!](https://gitlab.com/modular-angular-framework).
 
 Thanks for reading!
