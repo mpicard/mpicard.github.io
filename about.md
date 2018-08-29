@@ -9,8 +9,3 @@ Links:
 
 * [GitHub](https://github.com/mpicard)
 * [LinkedIn](https://www.linkedin.com/in/martinsoftware/)
-
-
-## CV
-
-<iframe src="https://docs.google.com/document/d/e/2PACX-1vSBjvwaaP55RYvfbnAOlLefkkvuDdystbZJ6rlDN2tWEDhQuWb2JFjIJLNVSzJes9AVan_nodSi99tS/pub?embedded=true"></iframe>
