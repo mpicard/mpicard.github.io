@@ -6,7 +6,6 @@ url: https://all-loops-considered.org
 baseurl: ""
 highlighter: rouge
 permalink: pretty
-url: https://github.com/mpicard
 paginate: 5
 
 author:
@@ -14,6 +13,7 @@ author:
   email: martin8768@gmail.com
 
 github:
+  url: https://github.com/mpicard
   repo: https://github.com/mpicard/mpicard.github.io
 
 plugins:
