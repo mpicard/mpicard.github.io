@@ -7,10 +7,10 @@ baseurl: ""
 highlighter: rouge
 permalink: pretty
 url: https://github.com/mpicard
+paginate: 5
 
 author:
   name: 'Martin Picard'
-paginate: 5
   email: martin8768@gmail.com
 
 github:
