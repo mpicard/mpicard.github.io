@@ -1,22 +1,17 @@
-port: 4444
-highlighter: rouge
-
-permalink: pretty
-
+version: 2.0
 title: All Loops Considered
 tagline:
 description: Programming et al.
 url: https://all-loops-considered.org
 baseurl: ""
+highlighter: rouge
+permalink: pretty
+url: https://github.com/mpicard
 
 author:
   name: 'Martin Picard'
-  url: https://github.com/mpicard
-  email: martin8768@gmail.com
-
 paginate: 5
-
-version: 2.0
+  email: martin8768@gmail.com
 
 github:
   repo: https://github.com/mpicard/mpicard.github.io
@@ -24,3 +19,5 @@ github:
 plugins:
   - jekyll-paginate
   - jekyll-gist
+
+port: 4444
