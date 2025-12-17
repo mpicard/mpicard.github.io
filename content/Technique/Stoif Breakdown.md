@@ -1,0 +1,28 @@
+- Layering
+  - Lots of layering, don't be shy some sounds have 3+ layers
+- Transition FX
+  - many layers of risers, reverses, crashes, tails, etc
+  - classic reversed reverb tails
+  - Not all FX hit exactly on the transition downbeat
+    - OTT works really well for increasing reverse reverb tail gain
+    - Dissonant reversed chord reverb tails
+    - One shots before and after transitions
+  - Fill up spectrum with tension building elements with more layers
+  - Backstreet boys samples
+  - Whitenoise downfilter after drop
+  - classic sub sweeps into break
+  - blur the line between groove and entering breakdown
+- Tension
+  - Several layered lead sounds
+  - negative space, remove instruments also increases tension
+  - add layer in second half of break to increase tension
+  - add new instrument(s) last bar of drop!
+  - Drum fills
+    - add to second half of break
+    - slapbacks are a must here
+    - SURPRISE ITS DULUS!
+    - snare rolls etc
+- Long Breaks
+  - conceptually the same but with more tension
+  - new instruments
+  - classic bring back kick "tease" with high pass near end

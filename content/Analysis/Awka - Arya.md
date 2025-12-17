@@ -1,0 +1,7 @@
+- weird FM-y kick
+- weird FM-y snare, tonal
+- lofi snare accents/fills
+  - 2 lofi snare hits before drop
+- very mono compatible, made for clubs/festivals
+- loud shakers
+-

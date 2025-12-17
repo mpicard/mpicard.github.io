@@ -1,0 +1,5 @@
+- [x] nice kick
+- [ ] try bass stereo
+- [ ] nice synth (riff)
+- [ ] also nice synth use as lead, repeats more, more hooky
+- [ ]

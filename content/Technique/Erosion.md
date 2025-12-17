@@ -1,0 +1,9 @@
+- noise
+- grit
+- excite
+- add noise to [[Wavetable]]
+- Wide noise
+  - add stereo
+  - works on synths
+- Sine
+  - similar to [[Redux]]

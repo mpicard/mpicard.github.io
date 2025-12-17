@@ -1,0 +1,9 @@
+- [x] break feels empty, needs more atmosphere
+- [ ] remove percs from break
+  - [x] or strings
+- [x] shorten arrangement!
+  - [x] 0:30 to break remove 16 bars
+  - [x] 4:40 skip to 5:10
+- [x] tom and openhat sound louder in intro than drop, fix that
+- [x] add ride/shaker/top loop to second drop more variation
+- [x] add big brass synth

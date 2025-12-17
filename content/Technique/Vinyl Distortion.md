@@ -1,0 +1,2 @@
+- not just for vinyl crackle
+- nice for synths too

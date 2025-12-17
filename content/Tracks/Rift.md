@@ -1,0 +1,9 @@
+- It's groovy
+- more swing on 16th hats it's too straight
+- dun dun dun synth probably too melodic techno
+- FX in first build up too loud perceived
+- nice dub synth
+- noise too loud in second drop, check overall loudness in breaks
+- beautiful track
+- nice transitions, very dramatic
+- he's not sure what advice to give, my genre, nice organic minimal

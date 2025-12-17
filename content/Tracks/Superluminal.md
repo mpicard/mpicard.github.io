@@ -1,0 +1,7 @@
+- [ ] Redo sound design lead after drop
+- [ ] bass isn't syncopated enough, especially in the intro
+- [ ] sidechain pads atmos too strong
+- [ ] turn off sidechain in breaks
+- [ ] transitions too loud maybe? rattle
+- [ ] loud one shot in break middle
+- [ ] long break would go straight into bass, not this "chill drop"

@@ -1,0 +1,5 @@
+- crunchy
+- gritty
+- great for kicks with builtin filter top end
+- great for hats more brighter
+- great for 303s

@@ -1,0 +1,21 @@
+- 104 - 118 BPM
+- major and minor keys
+- Artists
+  - Sydka
+  - Bassara
+  - Planet Caravan
+  - Deep Ändi
+  - Roze
+  - Esmaeili
+  - Mundai
+  - Ykonosh
+  - UREM
+  - Katabtu
+  - Kon Faber
+  - Atric
+  - Temple Tears
+  - Arutani
+  - Acud
+  - bawab
+
+- ## CALL AND RESPONSE

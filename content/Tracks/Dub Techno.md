@@ -1,0 +1,1 @@
+- bandpass hihats movement https://youtu.be/0oF5ROU8-Vs?t=357

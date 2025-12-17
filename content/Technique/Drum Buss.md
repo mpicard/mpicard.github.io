@@ -1,0 +1,3 @@
+- glue in the face
+- modern
+- not just drums obviously

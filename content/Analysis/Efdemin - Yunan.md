@@ -1,0 +1,10 @@
+- 125 BPM
+- 4/4
+- Gb min
+- only 1 chord piano
+- noise + drone
+- wood block pulse offbeat
+- open hit hat
+- high string drone
+- "lead/bass" 2-2-3 duh-duh-deeeh
+- dfadsf

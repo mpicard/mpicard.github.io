@@ -1,0 +1,12 @@
+- intro is too sparse
+  - add more percussion loops
+  - bigger / better clap
+  - bigger / powerful / better offbeat hat
+- bass is too boring
+  - make bass more interesting
+- lead melody/hook comes too late, 4min too long
+  - bring lead earlier
+  - more melody
+- weird mix
+  - problems in sub/bass
+  - check all the synths to make sure it's low cut

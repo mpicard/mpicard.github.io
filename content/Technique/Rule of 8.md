@@ -1,0 +1,5 @@
+- Introduce a new element every 8 bars
+- Add new sounds or elements
+- Remove sounds or elements
+- New sections; verse, pre chorus, chorus, drop, etc
+- Mix elements: change stereo image dynamics, effects

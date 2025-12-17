@@ -1,0 +1,8 @@
+- Am I doing this for me or others?
+- Do you find joy in the process or the result?
+- How many failures?
+- Would I still be proud if it got zero plays/likes?
+  - release your work only when you are proud of it
+  - intention, if you are proud then you have already succeeded
+- If I had infinite success tomorrow, would I change what/how I create?
+  - would you still make the same thing?

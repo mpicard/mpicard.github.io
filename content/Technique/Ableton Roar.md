@@ -1,0 +1,15 @@
+- Try:
+  - use LP after shaper to tame harsh freq
+  - use LP with LFO/ENV to add movement
+  - use LP in Pre to only process low freq
+  - use HP to filter sound before distortion, only highs distorted
+  - use HP with Res + Pre to boost certain freq to scream into Shaper
+  - use HP w/ LFO for sweeping, eg. pads
+  - use LP+HP in serial for BP
+  - use BP for dub fx, + feedback as delay
+  - use Notch with slow LFO for sweeping
+  - use Peak as EQ before or after Shaper
+  - use Morph w/ LFO to add movement
+  - use Comb w/ LFO for flanger
+  - use Resampling for sample rate reduction
+  - use Resampling + freq mod by slow LFO

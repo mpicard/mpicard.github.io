@@ -1,0 +1,2 @@
+- Do experimentation in the beginning preferably, if we do it later, it forces us to an end result
+- if you do it at the start, it takes the pressure off if 

@@ -1,0 +1,8 @@
+- 130 BPM
+- Ab min
+- pulse on end of bar
+- tambourine upbeat
+- 4 bass notes beginning of bar
+- high pad 543432 swells on sustain
+- chopped vocal
+- complex chord progression... cant decode

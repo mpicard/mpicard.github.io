@@ -1,0 +1,4 @@
+- Powel - Golden Brown
+  - Bass is only sub bass every 4 bars for 3 hits in last bar
+- Chiller tracks seem to have less bass note frequencies?
+-

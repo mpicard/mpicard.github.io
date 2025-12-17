@@ -1,0 +1,17 @@
+- Dusty old piano reverb chords atmosphere
+- Deep groovy bassline and toms
+  - try FM basses
+- Simple core drums, house-y 909 stuff
+- "What if it doesn't work"
+- Snare clap hybrid?
+- pretty repetitive but harmony is evolving!
+- evolving harmony!
+- "plucked strings" of all sorts
+  - Japanese guitars
+  - karplus strings
+  - guitars
+  - etc
+- how to make minor keys sound happy?
+- Tracklib 10k contest
+  - use koto and shimasen samples
+  - https://www.tracklib.com/music/artists/hizuru/yuuzoraharete

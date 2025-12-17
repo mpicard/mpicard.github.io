@@ -1,0 +1,7 @@
+- [x] more echo on intro chords
+- [x] surprise hihats too quiet
+- [x] not sure about bird foley, what about vinyl noise?
+- [x] 6min get's boring maybe want to do a 1m outro instead of 30s outro
+- [x] not enough surprise hihats
+- [x] prepare mixdown project
+- [ ] export samples

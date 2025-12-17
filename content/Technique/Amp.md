@@ -1,0 +1,6 @@
+- buzzy
+- gritty
+- noisey
+- supersaws
+- dub chords
+- aggressive

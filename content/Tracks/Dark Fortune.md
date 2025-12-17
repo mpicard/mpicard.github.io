@@ -1,0 +1,21 @@
+- [ ] lead duo should be at end of loop, not in middle
+- [ ] missing hypnotic element that ties it together
+- [ ] Vocal stabs
+- [ ] reverse some bass hits
+- [x] get ride or do something with the Hang, the silence sucks
+- [x] overusing drum same drum fill, loses it's punch
+- [x] fix pad cutting out real quick in the outro
+- [x] 3-bar crash automate decay
+- [x] too melodic, needs less elements, more echo
+- [x] bassline; needs more notes, variation, layers, it's boring
+- [x] do something with vox
+- [x] pads too loud, too long/sustained
+- [x] remove sidechain in break
+- [x] move kickstarts to groups, streamline shit
+- [x] open up voicing on pads/chords
+- [x] Reduce click, deeper kick
+- [x] stereo sub/bass/tom fix
+- [x] 909 OH after second drop
+- [x] Rework intro/outro for DJing
+- [x] Swap piano for another voice?
+- [x] new dark response to high dreamy melody (call)
