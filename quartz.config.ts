@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "mpicard.github.io/obsidian-quartz",
+    baseUrl: "mpicard.github.io",
     ignorePatterns: [
       "_Track_Kanban_.md",
       ".cursor",
