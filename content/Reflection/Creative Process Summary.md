@@ -1,10 +1,10 @@
-# Creative Process & AI Accountability Summary
+# [[Creative Process]] & AI Accountability Summary
 
 ## Overview
 
 This document outlines a systematic approach to music production and how AI
 serves as an accountability partner in maintaining consistency and completion.
-The system is built around a structured three-stage process (CAM) combined with
+The system is built around a structured three-stage  [[Creative Process]] combined with
 session tracking and AI-powered accountability to overcome common creative
 blocks and maintain momentum.
 
@@ -12,7 +12,7 @@ blocks and maintain momentum.
 
 **Core Commitment:** 6-month production pledge with daily sessions, 1 track per
 week (48 total tracks), focusing on "Imperfect Arrangement" - prioritizing
-volume and momentum over perfection.
+volume and momentum over perfection. Adjust your commitment to taste.
 
 **Philosophy:** The goal is to sublimate and have fun while creating music that
 gets listeners into flow state. The focus is on deep/atmospheric music that
@@ -158,5 +158,3 @@ core principles are:
 The markdown-based tracking system allows for easy sharing, modification, and
 integration with various tools while maintaining the core accountability and
 process benefits.
-
----

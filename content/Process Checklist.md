@@ -2,7 +2,7 @@
 publish: true
 ---
 
-[[CAM Process]]
+[[Creative Process]]
 
 ### **Creative Phase**
 
