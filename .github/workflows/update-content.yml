@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clone notes repo
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v6
         with:
           repository: "mpicard/notes"
           ref: main
@@ -19,7 +19,7 @@ jobs:
           path: notes
 
       - name: Clone this repo
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v6
         with:
           ref: main
           token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
@@ -61,7 +61,7 @@ jobs:
           ls content | head -20 | cat
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 22
 
