@@ -21,7 +21,13 @@ jobs:
   update_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Clone notes repo
+      - name: Clone this repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Clone notes repo (only for notebook updates)
+        if: github.event_name != 'push'
         uses: actions/checkout@v4.2.2
         with:
           repository: "mpicard/notes"
@@ -29,39 +35,32 @@ jobs:
           token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           path: notes
 
-      - name: Clone this repo
-        uses: actions/checkout@v4.2.2
-        with:
-          ref: main
-          token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-          path: quartz
-          fetch-depth: 0
-
       - name: Delete everything in content/ except index.md
+        if: github.event_name != 'push'
         run: |
-          cd quartz
           mv content/index.md . || touch index.md
           rm -rf content
           mkdir content
           mv index.md content/
 
       - name: Copy over media and files
+        if: github.event_name != 'push'
         run: |
           cd notes
           echo "----- Copying over Images folder"
-          cp -vr Images ../quartz/content/ || echo "Images folder not found, skipping"
+          cp -vr Images ../content/ || echo "Images folder not found, skipping"
           echo -e "\n----- Copying over Analysis folder"
-          cp -vr Analysis ../quartz/content/ || echo "Analysis folder not found, skipping"
+          cp -vr Analysis ../content/ || echo "Analysis folder not found, skipping"
           echo -e "\n----- Copying over Reflection folder"
-          cp -vr Reflection ../quartz/content/ || echo "Reflection folder not found, skipping"
+          cp -vr Reflection ../content/ || echo "Reflection folder not found, skipping"
           echo -e "\n----- Copying over Technique folder"
-          cp -vr Technique ../quartz/content/ || echo "Technique folder not found, skipping"
+          cp -vr Technique ../content/ || echo "Technique folder not found, skipping"
           echo -e "\n----- Copying over Tracks folder"
-          cp -vr Tracks ../quartz/content/ || echo "Tracks folder not found, skipping"
+          cp -vr Tracks ../content/ || echo "Tracks folder not found, skipping"
           echo -e "\n----- Copying over Markdown files from root"
-          cp -v *.md ../quartz/content/ 2>/dev/null || echo "No root markdown files found"
+          cp -v *.md ../content/ 2>/dev/null || echo "No root markdown files found"
           # Exclude specific files that are in ignorePatterns
-          cd ../quartz/content
+          cd ../content
           rm -f "Session Tracker.md" "_Track_Kanban_.md" "Accountability Log.md" 2>/dev/null || true
 
       - name: Setup Node
@@ -70,16 +69,13 @@ jobs:
           node-version: 22
 
       - name: Install dependencies
-        run: |
-          cd quartz
-          npm ci
+        run: npm ci
 
       - name: Build Quartz
-        run: |
-          cd quartz
-          npx quartz build
+        run: npx quartz build
 
       - name: Setup Git config (user and email), necessary for commits
+        if: github.event_name != 'push'
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
@@ -87,7 +83,6 @@ jobs:
       - name: Commit and push content changes (if triggered by notebook)
         if: github.event_name != 'push'
         run: |
-          cd quartz
           git add content/
           if ! git diff --staged --quiet; then
             git commit -m "Update content from notebook" || true
@@ -101,7 +96,13 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: quartz/public
+          path: public
+          name: github-pages
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
           name: github-pages
 
       - name: Wait before deploying
