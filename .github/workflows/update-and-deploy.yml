@@ -84,12 +84,17 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-      - name: Commit and push content changes
+      - name: Commit and push content changes (if triggered by notebook)
         if: github.event_name != 'push'
         run: |
           cd quartz
           git add content/
-          git diff --staged --quiet || (git commit -m "Update content from notebook" && git push)
+          if ! git diff --staged --quiet; then
+            git commit -m "Update content from notebook" || true
+            git push || true
+          else
+            echo "No content changes to commit"
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
 
