@@ -1,4 +1,0 @@
-- 2 chord
-- hypnotic
-- slow
-- additional excited/suspended chord for tension that resolves to first chord

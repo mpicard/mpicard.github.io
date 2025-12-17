@@ -1,2 +1,0 @@
-- Elektron retrigger SPD 1/12 makes dope syncopation
-- try claps on Eketron sequencer 5, 12, 15

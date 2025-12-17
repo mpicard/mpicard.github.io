@@ -1,2 +1,0 @@
-- DRY! Don't repeat yourself more than 3 times
-- ie. there **has** to be something different on the fourth loop

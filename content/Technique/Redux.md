@@ -1,7 +1,0 @@
-- reduce quality
-- digital crunch
-- enhance transients
-- works great on 303s
-- noisey
-- automate rate on pads
--

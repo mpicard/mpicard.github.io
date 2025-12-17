@@ -1,5 +1,0 @@
-- Effect Rack with multiple parallel echos (min 2) + dry channel
-- Shaper/stepped modulation to create a groove
-- Bounce to new track
-- Process
-- rinse + repeat

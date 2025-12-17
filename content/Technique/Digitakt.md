@@ -1,2 +1,0 @@
-- Use Track 8 to create a riser, when you want to play the riser unmute it
-- use envelops and slow LFO to built up

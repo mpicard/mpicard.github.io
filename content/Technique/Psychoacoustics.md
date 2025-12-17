@@ -1,7 +1,0 @@
-- recorded audio is a relatively new technology for our species
-- hearing the exact same snippet of sound is a new phenomenon
-- brain is attracted to this loop
-- however brain will get overstimulated quickly
-- brain will start to reject loop
-- body will release cortisol (fight/flight response) and mess up judgment
-- ego wants song to be finished/sound good
