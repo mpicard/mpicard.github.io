@@ -1,3 +1,7 @@
+---
+publish: false
+---
+
 - Why am I not finishing tracks?
   - perfectionism trap
 - Why does it need to be perfect?

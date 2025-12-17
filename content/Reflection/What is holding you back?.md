@@ -1,3 +1,7 @@
+---
+publish: false
+---
+
 - [ ] it's not about shortcuts
 - [ ] what do you need to give it?
 - [ ] Catchy melodies / hooks / leads
