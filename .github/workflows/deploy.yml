@@ -46,21 +46,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Wait for any in-progress deployments
-        run: |
-          echo "Checking for in-progress deployments..."
-          for i in {1..30}; do
-            STATUS=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-              "https://api.github.com/repos/${{ github.repository }}/pages/deployments" | \
-              jq -r '.[0].status // "completed"')
-            if [ "$STATUS" = "in_progress" ]; then
-              echo "Deployment still in progress, waiting... ($i/30)"
-              sleep 10
-            else
-              echo "No in-progress deployment found, proceeding..."
-              break
-            fi
-          done
+      - name: Wait before deploying
+        run: sleep 30
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
@@ -68,8 +55,8 @@ jobs:
       - name: Retry deployment if needed
         if: failure()
         run: |
-          echo "First attempt failed, waiting 30 seconds and retrying..."
-          sleep 30
+          echo "First attempt failed, waiting 60 seconds and retrying..."
+          sleep 60
       - name: Deploy to GitHub Pages (retry)
         if: failure()
         id: deployment_retry
