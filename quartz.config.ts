@@ -27,12 +27,11 @@ const config: QuartzConfig = {
       "Archive",
       "Code",
       "Courses",
-      "DJing",
       "Moodboards",
       "node_modules",
       "private",
-      "Session Tracker.md",
       "Templates",
+      "Tracks",
     ],
     defaultDateType: "modified",
     theme: {
@@ -89,7 +88,7 @@ const config: QuartzConfig = {
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
     ],
-    filters: [Plugin.RemoveDrafts()],
+    filters: [Plugin.RemoveDrafts(), Plugin.ExplicitPublish()],
     emitters: [
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),
