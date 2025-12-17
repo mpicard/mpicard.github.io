@@ -2,9 +2,11 @@ name: Update vault content
 
 on:
   workflow_dispatch:
-    push:
-      branches:
-        - main
+  repository_dispatch:
+    types: [notebook-updated]
+  push:
+    branches:
+      - main
 
 jobs:
   update_vault_content:
