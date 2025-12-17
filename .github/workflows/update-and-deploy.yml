@@ -9,7 +9,7 @@ on:
       - main
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -65,28 +65,32 @@ jobs:
         with:
           node-version: 22
 
+      - name: Setup Git config (user and email), necessary for commits
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Commit content changes before build (so git dates work)
+        run: |
+          git add content/
+          if ! git diff --staged --quiet; then
+            git commit -m "Update content from notebook" || true
+          else
+            echo "No content changes to commit"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+
       - name: Install dependencies
         run: npm ci
 
       - name: Build Quartz
         run: npx quartz build
 
-      - name: Setup Git config (user and email), necessary for commits
+      - name: Push content changes (only if triggered by notebook/manual)
         if: github.event_name != 'push'
         run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-
-      - name: Commit and push content changes (only if triggered by notebook/manual)
-        if: github.event_name != 'push'
-        run: |
-          git add content/
-          if ! git diff --staged --quiet; then
-            git commit -m "Update content from notebook" || true
-            git push || true
-          else
-            echo "No content changes to commit"
-          fi
+          git push || true
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
 
