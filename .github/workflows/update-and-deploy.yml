@@ -121,9 +121,6 @@ jobs:
             echo "No in-progress deployments found"
           fi
 
-      - name: Wait before deploying
-        run: sleep 30
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
