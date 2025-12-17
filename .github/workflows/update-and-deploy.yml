@@ -99,9 +99,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: quartz/public
+          name: github-pages
 
       - name: Wait before deploying
         run: sleep 30
