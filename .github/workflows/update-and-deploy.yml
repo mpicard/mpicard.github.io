@@ -26,8 +26,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Clone notes repo (only for notebook updates)
-        if: github.event_name != 'push'
+      - name: Clone notes repo
         uses: actions/checkout@v4.2.2
         with:
           repository: "mpicard/notes"
@@ -36,7 +35,6 @@ jobs:
           path: notes
 
       - name: Delete everything in content/ except index.md
-        if: github.event_name != 'push'
         run: |
           mv content/index.md . || touch index.md
           rm -rf content
@@ -44,7 +42,6 @@ jobs:
           mv index.md content/
 
       - name: Copy over media and files
-        if: github.event_name != 'push'
         run: |
           cd notes
           echo "----- Copying over Images folder"
@@ -80,7 +77,7 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-      - name: Commit and push content changes (if triggered by notebook)
+      - name: Commit and push content changes (only if triggered by notebook/manual)
         if: github.event_name != 'push'
         run: |
           git add content/
