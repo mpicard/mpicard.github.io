@@ -1,12 +1,24 @@
-name: Update vault content
+name: Update content and deploy
 
 on:
   workflow_dispatch:
   repository_dispatch:
     types: [notebook-updated]
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  update_vault_content:
+  update_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Clone notes repo
@@ -23,6 +35,7 @@ jobs:
           ref: main
           token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           path: quartz
+          fetch-depth: 0
 
       - name: Delete everything in content/ except index.md
         run: |
@@ -51,14 +64,6 @@ jobs:
           cd ../quartz/content
           rm -f "Session Tracker.md" "_Track_Kanban_.md" "Accountability Log.md" 2>/dev/null || true
 
-      - name: Print out current state of filesystem
-        run: |
-          echo "----- Folder: quartz/"
-          cd quartz
-          ls | cat
-          echo -e "\n----- Folder: quartz/content/"
-          ls content | head -20 | cat
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -69,15 +74,46 @@ jobs:
           cd quartz
           npm ci
 
+      - name: Build Quartz
+        run: |
+          cd quartz
+          npx quartz build
+
       - name: Setup Git config (user and email), necessary for commits
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-      - name: Sync Quartz repo
+      - name: Commit and push content changes
+        if: github.event_name != 'push'
         run: |
           cd quartz
-          npx quartz sync
+          git add content/
+          git diff --staged --quiet || (git commit -m "Update content from notebook" && git push)
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: quartz/public
+
+      - name: Wait before deploying
+        run: sleep 30
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - name: Retry deployment if needed
+        if: failure()
+        run: |
+          echo "First attempt failed, waiting 60 seconds and retrying..."
+          sleep 60
+
+      - name: Deploy to GitHub Pages (retry)
+        if: failure()
+        id: deployment_retry
+        uses: actions/deploy-pages@v4
 
