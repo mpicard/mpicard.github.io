@@ -4,9 +4,6 @@ on:
   workflow_dispatch:
   repository_dispatch:
     types: [notebook-updated]
-  push:
-    branches:
-      - main
 
 jobs:
   update_vault_content:
