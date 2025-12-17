@@ -1,0 +1,84 @@
+name: Update vault content
+
+on:
+  workflow_dispatch:
+    push:
+      branches:
+        - main
+
+jobs:
+  update_vault_content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone notes repo
+        uses: actions/checkout@v4.2.2
+        with:
+          repository: "mpicard/notes"
+          ref: main
+          token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          path: notes
+
+      - name: Clone this repo
+        uses: actions/checkout@v4.2.2
+        with:
+          ref: main
+          token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          path: quartz
+
+      - name: Delete everything in content/ except index.md
+        run: |
+          cd quartz
+          mv content/index.md . || touch index.md
+          rm -rf content
+          mkdir content
+          mv index.md content/
+
+      - name: Copy over media and files
+        run: |
+          cd notes
+          echo "----- Copying over Images folder"
+          cp -vr Images ../quartz/content/ || echo "Images folder not found, skipping"
+          echo -e "\n----- Copying over Analysis folder"
+          cp -vr Analysis ../quartz/content/ || echo "Analysis folder not found, skipping"
+          echo -e "\n----- Copying over Reflection folder"
+          cp -vr Reflection ../quartz/content/ || echo "Reflection folder not found, skipping"
+          echo -e "\n----- Copying over Technique folder"
+          cp -vr Technique ../quartz/content/ || echo "Technique folder not found, skipping"
+          echo -e "\n----- Copying over Tracks folder"
+          cp -vr Tracks ../quartz/content/ || echo "Tracks folder not found, skipping"
+          echo -e "\n----- Copying over Markdown files from root"
+          cp -v *.md ../quartz/content/ 2>/dev/null || echo "No root markdown files found"
+          # Exclude specific files that are in ignorePatterns
+          cd ../quartz/content
+          rm -f "Session Tracker.md" "_Track_Kanban_.md" "Accountability Log.md" 2>/dev/null || true
+
+      - name: Print out current state of filesystem
+        run: |
+          echo "----- Folder: quartz/"
+          cd quartz
+          ls | cat
+          echo -e "\n----- Folder: quartz/content/"
+          ls content | head -20 | cat
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: |
+          cd quartz
+          npm ci
+
+      - name: Setup Git config (user and email), necessary for commits
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Sync Quartz repo
+        run: |
+          cd quartz
+          npx quartz sync
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+

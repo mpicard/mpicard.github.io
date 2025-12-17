@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "mpicard.github.io/obsidian-quartz",
     ignorePatterns: [
       "private",
       "Templates",
