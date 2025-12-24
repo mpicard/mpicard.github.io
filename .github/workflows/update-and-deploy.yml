@@ -22,12 +22,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clone this repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
       - name: Clone notes repo
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v6
         with:
           repository: "mpicard/notes"
           ref: main
@@ -61,7 +61,7 @@ jobs:
           rm -f "Session Tracker.md" "_Track_Kanban_.md" "Accountability Log.md" 2>/dev/null || true
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 22
 
